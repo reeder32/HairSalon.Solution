@@ -9,7 +9,7 @@
 @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
 @Html.DisplayNameFor(model => model.Specialty): @Html.DisplayFor(model => model.Specialty)
 <p>All their associated clients will be deleted too!</p>
-@using (Html.BeginForm())
+@using (Html.BeginForm(new { @class = "form-group" }))
 {
-  <input type="submit" value="Delete" />
+  <input class="form-control btn-danger" type="submit" value="Delete" />
 }

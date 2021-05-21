@@ -3,7 +3,7 @@
 }
 @model HairSalon.Models.Stylist
 
-@using (Html.BeginForm())
+@using (Html.BeginForm(new { @class = "form-group" }))
 {
   @Html.HiddenFor(model => model.StylistId)
 
@@ -11,7 +11,7 @@
   @Html.EditorFor(model => model.Name)
   @Html.LabelFor(model => model.Specialty)
   @Html.EditorFor(model => model.Specialty)
-  <input type="submit" value="Save changes" />
+  <input class="form-control btn-primary" type="submit" value="Save changes" />
 
 }
 

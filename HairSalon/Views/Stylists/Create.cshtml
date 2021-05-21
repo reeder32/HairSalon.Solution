@@ -6,11 +6,14 @@
 
 <h4>Add new Stylist!</h4>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm(new { @class = "form-group" }))
 {
+  <div class="form-floating">
   @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name, null, new {@class = "form-control"})
+</div>
   @Html.LabelFor(model => model.Specialty)
-  @Html.TextBoxFor(model => model.Specialty)
-  <input type="submit" value="Add new Stylist" />
+  @Html.TextBoxFor(model => model.Specialty, null, new {@class = "form-control"})
+  <hr>
+  <input class="form-control btn-success" type="submit" value="Add new Stylist" />
 }
