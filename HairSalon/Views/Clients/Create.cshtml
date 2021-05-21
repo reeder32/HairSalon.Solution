@@ -6,13 +6,20 @@
 
 <h4>Add a new client</h4>
 
-@using (Html.BeginForm())
+
+@using (Html.BeginForm(new { @class = "form-group" }))
 {
+
+
   @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name, null, new {@class = "form-control"})
+  <hr>
 
-  @Html.LabelFor(model => model.Stylist)
-  @Html.DropDownList("StylistId")
 
-  <input type="submit" value="Add new client" />
+  @Html.LabelFor(model => model.Stylist, null, new {@style = "width: 100px"})
+
+  @Html.DropDownList("StylistId", null, new {@class = "form-select-lg "})
+
+  <input class="form-control btn-primary" type="submit" value="Add new client" />
+
 }
