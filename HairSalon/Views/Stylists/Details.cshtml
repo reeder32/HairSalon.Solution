@@ -22,4 +22,4 @@ else
 {
 <p>There are currently no clients for this stylists</p>
 }
-@Html.ActionLink("Add Client", "Clients/Create")
+@Html.ActionLink("Add Client", "Create", "Clients", new {id = Model.StylistId})
