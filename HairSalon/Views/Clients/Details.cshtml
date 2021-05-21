@@ -7,3 +7,4 @@
 <h1>Details for @Model.Name</h1>
 <h2>Stylist: </h2>
 @Html.ActionLink($"{@Model.Stylist.Name}", "Details", "Stylists", new {id = @Model.StylistId})
+@Html.ActionLink("Edit", "Edit", new {id = @Model.ClientId})
