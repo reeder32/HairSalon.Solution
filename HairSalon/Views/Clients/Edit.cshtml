@@ -8,7 +8,7 @@
   @Html.HiddenFor(model => model.ClientId)
   <div class="form-floating">
   @Html.LabelFor(model => model.Name)
-  @Html.EditorFor(model => model.Name, null, new {@class = "form-control"})
+  @Html.EditorFor(model => model.Name)
 </div>
   <hr>
   @Html.LabelFor(model => model.Stylist, null, new {@style = "width: 100px"})
@@ -18,7 +18,7 @@
 
 }
 
-<div class="btn-group justify-content-center" style="width: 100%">
+<div class="btn-group d-flex justify-content-center bg-light" style="width: 100%">
   @Html.ActionLink("Delete", "Delete", new {id = Model.ClientId}, new {@class="text-danger", @style="margin-right:50%"})
   @Html.ActionLink("Cancel", "Index",new {@style="margin-left:50%"}, new {@class="text-warning"})
 </div>

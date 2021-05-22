@@ -1,4 +1,10 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link"})
-  @Html.ActionLink("All Stylists", "Index", "Stylists", null, new { @class = "nav-link"})
-</nav>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link"})
+    @Html.ActionLink("All Stylists", "Index", "Stylists", null, new { @class = "nav-link"})
+  </nav>
+  <div class="p-5 text-center bg-light">
+    <h1 class="mb-3">Eau Claire's Salon</h1>
+    <h4 class="mb-3">Stylist & Client Tracker</h4>
+  </div>
+</header>

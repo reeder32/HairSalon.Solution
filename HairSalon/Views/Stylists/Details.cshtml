@@ -2,19 +2,18 @@
   Layout = "_Layout";
 }
 @using HairSalon.Models;
-
-<h1>Details for @Model.Name</h1>
-
-<h2>Specialty</h2>
-<h3>@Model.Specialty</h3>
-
-@if (Model.Clients.Count > 0)
+<div class="card text-center text-white bg-secondary mb-3">
+  <h5 class="card-header">Details for @Model.Name</h5>
+  <div class="card-body">
+    <h5 class = "card-title">Specialty</h5>
+    <h3 class="card-text">@Model.Specialty</h3>
+    @if (Model.Clients.Count > 0)
 {
-  <h2>Clients:</h2>
-  <ul>
+  <div class = "List-group-item">Clients:</div>
+  <ul class="list-group">
 @foreach (Client client in Model.Clients)
 {
-    <li>@Html.ActionLink($"{client.Name}", "Details", "Clients", new {id = client.ClientId})</li>
+    @Html.ActionLink($"{client.Name}", "Details", "Clients", new {id = client.ClientId}, new {@class="list-group-item list-group-item-action list-group-item-light"})
 }
 </ul>
 }
@@ -22,5 +21,10 @@ else
 {
 <p>There are currently no clients for this stylists</p>
 }
-@Html.ActionLink("Add Client", "Create", "Clients", new {id = Model.StylistId})
-<p>@Html.ActionLink("Edit", "Edit", new {id = Model.StylistId})</p>
+  </div>
+</div>
+<div class="btn-group d-flex justify-content-center bg-light" style="width: 100%">
+  @Html.ActionLink("AddClient","Create", "Clients", new{id=Model.StylistId}, new {@class="text-primary", @style="margin-right:25%"})
+  @Html.ActionLink("Edit", "Edit", new {id = Model.StylistId}, new {@style="margin-left:25%", @class="text-warning"})
+</div>
+

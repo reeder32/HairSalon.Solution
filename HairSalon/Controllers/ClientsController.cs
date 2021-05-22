@@ -46,6 +46,7 @@ namespace HairSalon.Controllers
     [HttpPost]
     public ActionResult Edit(Client client)
     {
+
       _db.Entry(client).State = EntityState.Modified;
       _db.SaveChanges();
       return RedirectToAction("Index");

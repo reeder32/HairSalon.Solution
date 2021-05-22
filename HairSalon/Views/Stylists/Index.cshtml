@@ -12,12 +12,15 @@
 }
 else
 {
-  <ul>
+  <ul class="list-group-flush">
   @foreach (Stylist stylist in Model)
     {
-      <li>@Html.ActionLink($"{stylist.Name}", "Details", new {id = stylist.StylistId})</li>
+      @Html.ActionLink($"{stylist.Name}", "Details", new {id = stylist.StylistId}, new { @class = "list-group-item"})
+
     }
   </ul>
-  @Html.ActionLink("All Clients", "Index", "Clients")
+  @Html.ActionLink("All Clients", "Index", "Clients",null, new {@class="form-control btn-light text-center"})
 }
-@Html.ActionLink("Add new Stylists", "Create")
+<div>
+  @Html.ActionLink("Add new Stylists", "Create",null,null, new {@class="form-control btn-primary d-flex justify-content-center"})
+</div>
