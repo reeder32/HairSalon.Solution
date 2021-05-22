@@ -22,8 +22,10 @@ git clone https://github.com/reeder32/HairSalon.Solution.git
 ```
 #### Install Database
 [Download MySqlWorkBench](https://dev.mysql.com/downloads/workbench/)
+##### Open in VS Code
 ```sh
-cd HairSalon
+cd HairSalon.Solution
+code .
 ```
 * click on nick_reeder.sql
 
