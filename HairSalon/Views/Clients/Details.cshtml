@@ -3,8 +3,13 @@
 }
 
 @model HairSalon.Models.Client
-
-<h1>Details for @Model.Name</h1>
-<h2>Stylist: </h2>
-@Html.ActionLink($"{@Model.Stylist.Name}", "Details", "Stylists", new {id = @Model.StylistId})
-@Html.ActionLink("Edit", "Edit", new {id = @Model.ClientId})
+<div class="card text-center text-secondary bg-light mb-3">
+  <h5 class="card-header">Details for @Model.Name</h5>
+  <h6 class="card-title">Stylist: @Html.ActionLink($"{@Model.Stylist.Name}", "Details", "Stylists", new {id =
+    @Model.StylistId})</h6>
+    <h6>Notes:</h6> <p>@Model.Notes</p>
+  <div class="card-body list-group">
+    @Html.ActionLink("Edit", "Edit", new {id = @Model.ClientId}, new {@class="list-group-item list-group-item-action list-group-item-warning"})
+  </div>
+</div>
+@await Html.PartialAsync("FormFooter")

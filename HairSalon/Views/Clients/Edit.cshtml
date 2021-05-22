@@ -1,5 +1,6 @@
 @{
   Layout = "_Layout";
+
 }
 @model HairSalon.Models.Client
 
@@ -9,6 +10,10 @@
   <div class="form-floating">
   @Html.LabelFor(model => model.Name)
   @Html.EditorFor(model => model.Name)
+</div>
+  <div class="form-floating">
+  @Html.LabelFor(model => model.Notes)
+  @Html.EditorFor(model => model.Notes)
 </div>
   <hr>
   @Html.LabelFor(model => model.Stylist, null, new {@style = "width: 100px"})
@@ -22,3 +27,4 @@
   @Html.ActionLink("Delete", "Delete", new {id = Model.ClientId}, new {@class="text-danger", @style="margin-right:50%"})
   @Html.ActionLink("Cancel", "Index",new {@style="margin-left:50%"}, new {@class="text-warning"})
 </div>
+@await Html.PartialAsync("FormFooter")

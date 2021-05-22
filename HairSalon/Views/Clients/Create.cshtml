@@ -10,9 +10,10 @@
 @using (Html.BeginForm(new { @class = "form-group" }))
 {
 
-
   @Html.LabelFor(model => model.Name)
   @Html.TextBoxFor(model => model.Name, null, new {@class = "form-control"})
+  @Html.LabelFor(model => model.Notes)
+  @Html.TextBoxFor(model => model.Notes, null, new {@class = "form-control"})
   <hr>
 
 
