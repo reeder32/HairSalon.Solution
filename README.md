@@ -34,6 +34,16 @@ code .
 2. paste contents in MySqlWorkBench
 3. click on lightning bolt, and watch MySqlWorkBench work its magic :-)
 
+**IMPORTANT**
+1. In the root folder create a file 'appsettings.json'
+2. Copy text below:
+```sh 
+{
+  "ConnectionStrings" : {
+    "DefaultConnection" : "Server=localhost;Port=3306;database=nick_reeder;uid=root;pwd=epicodus;"
+  }
+}
+```
 #### Run on Browser
 ```sh
 cd HairSalon
